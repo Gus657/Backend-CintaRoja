@@ -1,0 +1,23 @@
+{
+  "name": "base-api",
+  "version": "1.0.0",
+  "description": "Default Directory to build an api CRUD MERN.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [
+    "API",
+    "crud",
+    "mongo",
+    "express",
+    "node."
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9",
+    "path": "^0.12.7"
+  }
+}
