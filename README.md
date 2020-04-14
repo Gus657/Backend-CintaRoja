@@ -4,7 +4,7 @@ Repositorio para la API del proyecto final de Cinta Roja.
 El proyecto ya contiene indicadas las dependencias utilizadas para construir la API.
 Para hacerla funcionar debes ejecutar lo siguiente:
 
-- Dentro de la carpeta del proyecto ejecuta:
+Dentro de la carpeta del proyecto ejecuta:
 
         npm i
         
