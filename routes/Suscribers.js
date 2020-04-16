@@ -14,22 +14,17 @@ Hi T.T
 
 const express = require('express');
 const router = express.Router();
-
-const Subscribers =  require('../models/Subscribers');
-
+const Subscribers =  require('../models/Suscribers');
 
 // creando a la gente
 router.post('/api/v1/Subscribers',(req, res)=>{
-    if (!req.body.Subscribers || req.body.Subscribers.length === 0) {
-        res.status(401).json({ mensaje: "cual es tu nickname o correo a utilizar?" })
-      }
     const {body} = req;
    return Subscribers.create(body)
     .then(createdSubscribers=> res.status(201).json(createdSubscribers))
     .catch(err=> res.status(401).json(err));
 });
 
-
+/* 
 //reflejando a una sola persona
 router.get('/api/v1/Subscribers/:id',(req, res)=> {
     const {id} = req.params;
@@ -40,7 +35,7 @@ router.get('/api/v1/Subscribers/:id',(req, res)=> {
       })
     .catch(err=> res.status(401).json(err));
 });
-
+ */
 
 // reflejando el nombre de todos los usuarios
 router.get('/api/v1/Subscribers',(req, res)=>{
@@ -51,7 +46,7 @@ router.get('/api/v1/Subscribers',(req, res)=>{
 
 
 //modificar la informacion . sera que aqui es donde busco lo de mandar un pin?
-router.patch('/api/v1/Subscribers/:id',(req, res)=>{
+/* router.patch('/api/v1/Subscribers/:id',(req, res)=>{
     const {id} = req.params;
     Subscribers.findByIdAndUpdate(id,req.body,{new: true})
     .then(Subscribers => res.status(201).json(Subscribers))
@@ -67,6 +62,6 @@ router.delete('/api/v1/Subscribers/:id',(req, res)=>{
     Subscribers.findByIdAndDelete(id)
     .then(() => res.status(204).json())
     .catch(err=> res.status(400).json(err));
-});
+}); */
 
 module.exports = router;

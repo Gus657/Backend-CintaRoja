@@ -1,12 +1,14 @@
 const mongoose= require('mongoose');
 const Schema = mongoose.Schema;
+
+const Suscribers =  require('../models/Suscribers');
 const donationSchema= new Schema({
-    suscriber: {type: mongoose.Schema.ObjectId, ref: Sucribers, required: true},
+    suscriber: String,
     amount: Number,
     message: String,
 })
 
-const Donations = mongoose.model(donationSchema);
+const Donations = mongoose.model('DOnations',donationSchema);
 module.exports = Donations
 
 /*
