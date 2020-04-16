@@ -8,8 +8,8 @@ require('./database');
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 //Routes
-/* app.use(require('./routes/Suscribers'));
-app.use(require('./routes/Donations')); */
+app.use(require('./routes/Suscribers'));
+app.use(require('./routes/Donations')); 
 
 //Default Route to Documentation
 app.get('*', (req, res)=> res.sendFile(path.join(__dirname+'/public/index.html')));
