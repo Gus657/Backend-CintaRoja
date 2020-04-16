@@ -10,7 +10,7 @@ router.post('/api/v1/Donations',(req, res)=>{
       }
     const {body} = req;
    return Donations.create(body)
-    .then(createdDonations=> res.status(201).json({ mensaje: "¡Gracias por tu donación!" }createdDonations))
+    .then(=> res.status(201).json({ mensaje: "¡Gracias por tu donación!" }))
     .catch(err=> res.status(400).json(err));
 });
 
